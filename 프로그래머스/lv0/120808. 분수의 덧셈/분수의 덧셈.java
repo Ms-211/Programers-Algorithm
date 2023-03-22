@@ -4,9 +4,16 @@ class Solution {
         int[] answer = new int[2];
         int bunmo = denom1 * denom2;
         int bunza = numer1 * denom2 + numer2 * denom1;
+        int a = 0;
+        int b = 0;
         
-        int a = bunmo;
-        int b = bunza;
+        if(a > b){
+          a = bunmo;
+          b = bunza;
+        }else{
+          a = bunza;
+          b = bunmo;
+        }
         
         while(b != 0){
             int r = a % b;
